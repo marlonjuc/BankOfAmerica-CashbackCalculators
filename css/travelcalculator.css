@@ -1,0 +1,912 @@
+#flashContent{
+    margin-bottom: 5px;
+}
+
+#html5Content{
+    background-color:#ede9e3;
+    width:669px;
+    margin-top: 40px;
+    position: relative;
+    display:none;
+}
+
+@font-face {
+    font-family:'ConnectionsBold';
+    src: url('../fonts/connections_bold-web.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/connections_bold-web.ttf') format('truetype'),
+        url('../fonts/connections_bold-web.woff') format('woff'),
+        url('../fonts/connections_bold-web.svg#ConnectionsBold') format('svg'); 
+}
+
+
+@font-face {
+    font-family:'ConnectionsRegular';
+    src: url('../fonts/connections_regular-web.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/connections_regular-web.ttf') format('truetype'),
+         url('../fonts/connections_regular-web.woff') format('woff'),
+         url('../fonts/connections_regular-web.svg#ConnectionsRegular') format('svg');
+}
+
+.wrapperCalculator {
+    background-color:#ece6dd;
+    padding-top: 70px;
+    margin-bottom: 60px;
+	height: 1049px;
+}
+
+.header
+{
+    background-color:#c41230;
+    width:476px;
+    height:70px;
+    position:absolute; top:-18px; left:0px;
+}
+
+h3{
+    color: #FFFFFF;
+    font-size:21px;
+    text-align:left;
+    position:relative; top:10px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    word-spacing:2px;
+    margin-left:25px;
+    width:580px;
+}
+
+h4{
+    color: #FFFFFF;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    font-size:16px;
+    text-align:left;
+    position:relative; top:10px;
+    margin-left:25px;
+    float:left;
+}
+
+.content {
+    background-color:#ece6dd;
+    width:669px;
+    position:relative;
+}
+
+#section1 {
+    width:640px;
+    height:120px;
+    padding-left: 10px;
+    position:relative; top:0px; left:0px;
+}
+ 
+#section2 {
+    width:640px;
+    height:153px;
+    padding-left: 10px;
+    position:relative; top:0px; left:0px;
+}
+
+.title {
+    width:550px;
+    height:20px;
+    position:relative; top:0px; left:0px;
+    color:#524940;
+    font-size:14px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    margin-left:16px;
+}
+
+aside .note{
+    margin-left: 72px;
+}
+
+.description {
+    width:669px;
+    height:20px;
+    position:relative; top:46px;
+    margin-left: -25px;
+    color:#524940;
+    font-size:13px;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    float:left;
+    text-align:center;
+}
+
+.description a{
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    color:#0073cf;
+}
+
+/* Styles for Sliders */
+
+#slider1{
+    width: 542px;
+    position: absolute;
+    height: 13px;
+    background-color: #FFFFFF;
+    top:50px;
+    left: 50px;
+}
+
+#slider2{
+    width: 542px;
+    position: absolute;
+    height: 13px;
+    background-color: #FFFFFF;
+    top:50px;
+    left: 50px;
+}
+
+/*Styles for scrubber bars*/
+
+.ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 90px;
+    height: 37px;
+    cursor: pointer;
+    background: url('../img/ui/scrubber_globe.png') no-repeat; overflow: visible;
+    background-position: left 0px top 0px;
+    color: #1C94C4;
+    top: -28px;
+    margin-left: -45px;
+    text-align:center;
+    text-decoration:none;
+}
+
+.ui-slider-range {
+    background-color:#c41230;
+    position: absolute;
+    border: 0;
+    top: 0;
+    left:0;
+    width:0px;
+    height: 100%;
+}
+
+.ui-slider-handle .white{
+    color:#FFFFFF;
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    margin-top:2px;
+    width: 90px;
+    height: 29px;
+    text-align:center;
+}
+
+.ui-slider-handle .dollar{
+    color:#FFFFFF;
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    position:relative; top:-2px;
+}
+
+/*Styles for ranges*/
+
+.ranges {
+    position:relative; top:46px; left:40px;
+    width: 570px;
+    height: 10px;
+    float:left;
+}
+
+.init {
+    position:relative; top:0px; left:0px;
+    width: 50px;
+    height: 10px;
+    float:left;
+    color:#c41230;
+    font-size:14px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+.end {
+    position:relative; top:0px; left:456px;
+    width: 50px;
+    height: 10px;
+    float:left;
+    color:#c41230;
+    font-size:14px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+
+/*Styes for screens*/
+
+.screens{
+    width: 659px;
+    background-color:#ece6dd;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.screen{
+    position:relative; top:0px; left:0px;
+    width: 199px;
+    height: 46px;
+    background-color:#FFFFFF;
+    float:left;
+    margin-left:8px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:14px;
+    text-align:center;
+    color:#6b5e51;
+    opacity: 0.9;
+}
+
+.screenLeft {
+	text-align: left;
+}
+
+.screenRed{
+    color: #c41230;
+}
+
+.screen .value{
+    position:relative; top:35%; left:0px;
+	padding: 20px;
+}
+
+#subheader{
+    clear: both;
+    position: relative;
+    width:547px;
+    height:70px;
+}
+
+#subheader h3{
+	width: 545px;
+	font-size: 19px;
+	font-family: 'ConnectionsBold', Arial, sans-serif;
+	line-height: 35px;
+	position: relative;
+	top: 20px;
+	margin-top: 47px;
+}
+
+/*Styles fot Charts*/
+    
+#charts {
+    margin-top: 15px;
+	margin-left: 8px;
+}
+
+.icon{
+    width:46px;
+    height:47px;
+    position:relative; top:0px; left:0px;
+    float:left;
+}
+
+
+
+#points .icon{
+    top:2px;
+    left:-35px;
+}
+
+.graphicTitle {
+    color: #6b5e51;
+    position:relative; top:0px; left:-8px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:16px;
+    text-align:left;
+    width:190px;
+    float:left;
+    margin-left:10px;
+    opacity: 0.9;
+}
+
+.graphicSubtitle {
+    color: #6b5e51;
+    position:relative; top:-5px; left:10px;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    font-size:13px;
+    text-align:left;
+    width:210px;
+    opacity: 0.9;
+}
+
+#points .graphicTitle {
+    left:-28px;
+}
+
+#points .graphicSubtitle {
+    left:26px;
+}
+
+.line {
+    width: 207px;
+    height: 4px;
+    position:relative; top:4px; left:0px;
+    background-color:#a39382;
+}
+
+#graphics, #points{
+    float:left;
+    margin-left:27px;
+}
+
+#graphics{
+    width: 300px;
+	margin-left: 17px;
+}
+
+#points{
+    width: 278px;
+    margin-bottom: 10px;
+}
+
+.or{
+    position:relative;
+	top:125px;
+    float:left;
+    color: #6b5e51;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:28px;
+    text-align:center;
+	right: 10px;
+}
+
+.bar{
+    margin-left:44px;
+	margin-bottom:20px;
+}
+
+.ie7 .bar{
+    margin-left:44px;
+    width:300px;
+    position:relative; top:0px; left:18px;
+}
+
+#points .bar{
+    margin-left:22px;
+}
+
+.ie7 #points .bar{
+    margin-left:22px;
+    left:-6px;
+}
+
+#graphics .shapes{   
+    position:relative; top:15px; left:0px;
+    float:left;
+}
+
+.ie7 #points .shapes{
+    position:relative; top:-10px; left:22px;
+    float:left;
+    width:280px;
+}
+
+#points .shapes{
+    position:relative; top:-10px; left:22px;
+    float:left;
+}
+
+.shapes .line {
+	top: -1px;
+}
+
+.levels{
+    position:relative; top:5px; left:0px;
+    width:275px;
+	padding-top: 20px;
+}
+
+.ruler{
+    position:relative; top:0px; left:0px;
+    height:33px;
+    background-color:#FFFFF;
+    float:left;
+}
+
+.lastItem{
+	position:relative;
+	top:5px;
+}
+
+#points .ruler{
+    height:26px;
+    width:252px;
+}
+
+.level{
+    position:relative; top:-3px; left:0px;
+    font-size:12px;
+    font-family:Arial, sans-serif;
+    color:#524940;
+    width:42px;
+    float:left;
+    opacity:0.8;
+	text-align: right;
+	margin-right: 10px;
+}
+
+#points .level{
+	width: 20px;
+	left: -9px;
+}
+
+.lineSmall{
+    position:relative; top:6px; left:0px;
+    width: 207px;
+    height: 1px;
+    background-color:#cfc6b7;
+    float:right;
+}
+
+#points .lineSmall{
+    left:-23px;
+}
+
+
+/*Graphic 1*/
+
+#chart1 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:16px;
+    background-color:#c41230;
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+/*Graphic 1_1*/
+
+#chart1_1 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:16px;
+    background-color:#ae9a85;
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+#chart1_1 .triangle-border {
+	left: -18px;
+}
+
+/*Graphic 2*/
+
+#chart2 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:120px;
+    background-color:#012169;
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+/*Graphic 2_1*/
+
+#chart2_1 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:120px;
+    background-color:#ae9a85;
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+#chart2_1 .triangle-border {
+	left: -24px;
+}
+
+/*Graphic 3*/
+
+#chart3 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:64px;
+    background-color:#c41230;
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+/*Graphic 4*/
+
+#chart4 {
+    width: 74px;
+    height: 1px;
+    position:absolute; top: -4px; left:64px;
+    background-color:#a39382; /*#ae9a85;*/
+    opacity: 0.8;
+	blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply;
+}
+
+/*Styles for the color indicators*/
+
+.colors{
+    position:relative;
+    float:left;
+	text-align: left;
+	top:-14px;
+}
+
+#points .colors {
+	left: 10px;
+}
+
+#base .colors {
+	width: 300px;
+	left: 100px;
+}
+
+.colorIndicator{
+    height:16px;
+    float:left;
+    margin-bottom:8px;
+}
+
+.colorDisplayer{
+    background-color:#c41230;
+    width:16px;
+    height:16px;  
+    float:left;
+}
+
+.lightgrey{
+    background-color:#a39382;
+}
+
+.darkgrey{
+    background-color:#857363;
+}
+
+.darkblue{
+    background-color:#012169;
+}
+
+.colorDescription{
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    color: #524940;
+    font-size:10px;
+	margin-left: 24px;
+	margin-right: 25px;
+	width: 85px;
+}
+
+/*Styles for content in speech bubbles*/
+
+#monthcash {
+    color: #FFFFFF;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:16px;
+    text-align:center;
+}
+
+#monthcash.noBonus {
+	font-size: 10px;
+}
+
+#totalcash {
+    color: #FFFFFF;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:16px;
+    text-align:center;
+}
+
+#totalcash.noBonus {
+	font-size: 10px;
+}
+
+#totalpoints{
+    color: #FFFFFF;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    font-size:16px;
+    text-align:center;
+}
+
+#totalpoints.noBonus {
+	font-size: 10px;
+}
+
+.triangle-border .superscript {
+    font-size:10px;
+    color: #FFFFFF;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+/*Speech bubble*/
+
+.triangle-border {
+    width: 113px;
+    height: 14px;
+    position:relative; top:-27px; left: -22px;
+    padding:1px;
+    /*margin:1em 0 3em;*/
+    border:2px solid #0b548f;
+    color:#FFFFFF;
+    background-color:#0b548f;
+    opacity: 1;
+    text-align:center;
+    font-size:10px;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    line-height: 15px;
+}
+
+.triangle-border:before {
+    content:"";
+    position:absolute;
+    bottom:-10px; /* value = - border-top-width - border-bottom-width */
+    left: 65px; /* controls horizontal position */
+    border-width:9px 9px 0;
+    border-style:solid;
+    border-color:#0b548f transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+.triangle-border:before.noBonus {
+	left: 64px;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+    content:"";
+    position:absolute;
+    bottom:-7px; /* value = - border-top-width - border-bottom-width */
+    left:67px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:7px 7px 0;
+    border-style:solid #0b548f;
+    border-color:#0b548f transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/*Styles for base and footer elements*/
+
+#base{
+    text-align:right;
+}
+
+.pointsLabel {
+	color: #524940;
+	position:relative;
+	top: -5px;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	margin-right: 64px;
+	float:right;
+}
+
+#base .pointsLabel {
+	top: -13px;
+}
+
+.pointsLabelRight {
+	color: #524940;
+	position:relative;
+	top: -16px;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	margin-right: 40px;
+	float:right;
+}
+
+#points .pointsLabel {
+	width: 180px;
+	margin-right: 50px;
+	margin-bottom:6px;
+}
+
+.pointsLabel .base{
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    font-size:10px;
+}
+
+/*Styles for input checkbox*/
+    
+#bonus {
+    background-color:#d1c9c0;
+    width:625px;
+    overflow: hidden;
+    line-height:12px;
+    margin: -2px 0 50px;
+	text-align: left;
+	float: left;
+}
+
+#bonus sup{
+    top: -0.4em;
+    font-family:Arial, sans-serif;
+    font-size:9px;
+}
+
+.disabled {
+	width: 17px;
+	height: 17px;
+	background-color: #DDD;
+	position: absolute;
+	top: 1112px;
+	opacity: 0.5;
+}
+
+.enabled {
+	visibility: hidden;
+}
+
+#leftDisabled {
+	left: 31px;
+}
+
+#rightDisabled {
+	left: 309px;
+}
+
+.titleBonus{
+    position:relative; top:8px; left:28px;
+    color: #524940;
+    font-family: Arial, sans-serif;
+    font-size:11px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.checkbox{
+    margin-left:28px;
+    width:250px;
+    float:left;
+}
+
+.selector {
+    background-color:#cec7b7;
+    position:relative; top:-1px; left:1px;
+    float:auto;
+    width:22px;
+    height:24px;
+}
+
+.cover {
+    background-color:#d1c9c0;
+    position:absolute; top:-1px; left:1px;
+    float:auto;
+    width:22px;
+    height:24px;
+    opacity:0;
+}
+
+input {
+    position:relative; top:0px; left:0px;
+    float:auto;
+    width:22px;
+    height:22px;
+}
+
+.ie7 input {
+    width:22px;
+    height:22px;
+}
+
+#bonus label{
+    font-family:Arial, sans-serif;
+    font-size:11px;
+    position:relative; top:-19px; left:32px;
+    display: block; 
+    width:278px; 
+    color: #524940;
+    line-height: 13px;
+}
+
+label .bold{
+    font-family:Arial, sans-serif;
+    font-size:11px;
+    font-weight:bold;
+}
+
+footer {
+	padding-top: 18px;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size:7px;
+}
+
+.footerPadding {
+    background-color:#eee9e3;
+    width:669px;
+    height:35px;
+    position:relative; top:0px; left:0px;
+    float:left;
+}
+
+.footerBorder {
+    background-color: #d1c9c0;
+    color: #524940;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    height: 60px;
+    text-align: left;
+    width: 600px;
+	padding-left: 25px;
+	float: left;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+
+
+.ie7 #benefits{
+    margin-left:-8px;
+ }
+ 
+.ie8 #benefits{
+    margin-left:-8px;
+ }
+ 
+.ie7 .big_blue {
+    margin-left:-3px;
+}
+.ie8 .big_blue {
+    margin-left:-3px;
+}
+
+.footerBorder p{
+    line-height: 14px;
+    margin:0;
+    position: relative;
+	margin-top:9px;
+}
+
+
+/**
+* CSS File for ezMark jQuery Plugin
+*
+**/
+
+.ez-hide { 
+    opacity: 0; filter:alpha(opacity=0); 
+}
+.ez-checkbox {
+    background: transparent url('../img/ui/custom_checkbox.png') 0 0px no-repeat;
+    display:inline-block;
+}
+.ie7 .ez-checkbox {
+    width:22px;
+    height:22px;
+}
+.ez-checked { 
+    background-position: 0 -22px; 
+}
+.ez-selected { 
+    background-position: 0 -20px; 
+}
+
+.ez-checkbox { 
+    zoom: 1; *display:inline; _height:40px; 
+}
+
+/**
+* Responsive Design
+*
+* The iPhone 4 display is 320 by 480 points in size total. 
+* The status bar is 20 points high, 
+* and the tool bar at the bottom in 44 points high.
+*
+**/
+
+@media screen and (max-width: 450px) {
+
+/*
+#charts {
+    width: 330px;
+    position:relative; top:420px; left:120px;
+}
+*/
+
+}
+

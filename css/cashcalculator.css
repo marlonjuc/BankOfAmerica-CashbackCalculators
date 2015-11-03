@@ -1,0 +1,665 @@
+#flashContent{
+    margin-bottom: 40px;
+}
+
+#html5Content{
+    background-color:#ece6dd;
+    width:669px;
+    margin-top: 47px;
+    position: relative;
+    display:none;
+}
+
+@font-face {
+	font-family:'ConnectionsBold';
+	src: url('../fonts/connections_bold-web.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/connections_bold-web.ttf') format('truetype'),
+        url('../fonts/connections_bold-web.woff') format('woff'),
+        url('../fonts/connections_bold-web.svg#ConnectionsBold') format('svg'); 
+}
+
+
+@font-face {
+	font-family:'ConnectionsRegular';
+    src: url('../fonts/connections_regular-web.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/connections_regular-web.ttf') format('truetype'),
+         url('../fonts/connections_regular-web.woff') format('woff'),
+         url('../fonts/connections_regular-web.svg#ConnectionsRegular') format('svg');
+}
+ 
+.wrapperCalculator {
+    background-color:#ece6dd;
+    padding-top: 70px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    height:610px;
+}
+
+.header
+{
+    background-color:#c41230;
+    width:476px;
+    height:70px;
+    position:absolute; top:-18px; left:0px;
+}
+
+h3{
+	color: #FFFFFF;
+	font-size:20px;
+	text-align:left;
+	position:relative; top:10px; left:10px;
+	font-family:'ConnectionsBold', Arial, sans-serif;
+    letter-spacing:1px;
+    width:476px;
+    height:30px;
+}
+
+h4{
+    color: #FFFFFF;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    font-size:16px;
+    text-align:left;
+    position:relative; top:7px; left:10px;
+    width:476px;
+    height:30px;
+}
+
+.content {
+	background-color:#ece6dd;
+	width:300px;
+	position:relative; top:30px; left:0px;
+	float:left;
+	margin-left:22px;
+    margin-bottom: 95px;
+}
+
+.icons{
+    width:62px;
+	height:378px;
+    position:relative; top:64px; left:0px;
+    float:left;
+}
+
+.icons #icon1{
+    position:relative;
+    top:0px;
+	left:20px;
+}
+
+.icons #icon2{
+    position:relative;
+    top:120px;
+	left:20px;
+}
+
+.icons #icon3{
+    position:relative;
+    top:236px;
+	left:20px;
+}
+
+/*Loyalty Headers*/
+
+.loyalty{
+    position:relative;
+    top:0px;
+    left:-40px;
+    width:605px;
+    height:28px;
+    float:left;
+}
+
+.lotaltyTitle{
+    color:#c41230;
+    font-size:13px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    width:125px;
+    float:left;
+}
+
+.loyaltyHeader{
+    color:#524940;
+    font-size:12px;
+    font-family: Arial, sans-serif;
+    width:660px;
+    height:28px;
+    float:none;
+    position:relative;
+    top:1px;
+}
+
+.loyaltyTotal{
+    color:#c41230;
+    font-size:13px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    
+}
+
+/*Sections*/
+
+#section1 {
+	width: 400px;
+	height:175px;
+	position:relative; top:0px; left:0px;
+}
+
+#section2 {
+	width: 400px;
+	height:158px;
+	position:relative; top:0px; left:0px;
+}
+
+#section3 {
+	width: 400px;
+	height:126px;
+	position:relative; top:0px; left:0px;
+}
+ 
+.title {
+	width:185px;
+	height:20px;
+	position:relative; top:0px; left:0px;
+	color:#0073cf;
+	font-size:14px;
+	font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+.description {
+	width:326px;
+	height:20px;
+	position:relative; top:0px; left:0px;
+	color:#6b5e51;
+	font-size:13px;
+    font-family:Arial, sans-serif;
+}
+
+
+/* Styles for Sliders */
+
+#slider1{
+	width: 237px;
+	position: absolute;
+	height: 13px;
+	background-color: #FFFFFF;
+	top: 108px;
+    left: 0px;
+}
+
+#slider2{
+	width: 237px;
+	position: absolute;
+	height: 13px;
+	background-color: #FFFFFF;
+	top: 90px;
+    left: 0px;
+}
+
+#slider3{
+	width: 237px;
+	position: absolute;
+	height: 13px;
+	background-color: #FFFFFF;
+	top: 90px;
+    left: 0px;
+}
+
+/*Styles for scrubber bars*/
+
+.ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 90px;
+    height: 37px;
+    cursor: pointer;
+    background: url('../img/ui/scrubber_globe.png') no-repeat; overflow: visible;
+    background-position: left 0px top 0px;
+    top: -28px;
+    margin-left: -45px;
+    text-decoration:none;
+    text-align:center;
+}
+
+.ui-slider-range {
+    background-color:#c41230;
+    position: absolute;
+    border: 0;
+    top: 0;
+    left:0;
+    width:0px;
+    height: 100%;
+}
+
+.ui-slider-handle .white{
+    color:#FFFFFF;
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    margin-top:2px;
+    width: 90px;
+    height: 29px;
+    text-align:center;
+}
+
+.ui-slider-handle .dollar{
+    color:#FFFFFF;
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    position:relative; top:-2px;
+}
+
+
+/* Styles for Tooltips */
+
+.tooltip {
+    position: relative;
+    display: block;
+    top: 13px;
+    width: 16px;
+    height: 16px;
+    color: #6b5e51;
+    text-align: center;
+    font-size:13px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    z-index: 5;
+    margin-left:-8px;
+}
+
+
+/*Styles for ranges*/
+
+.ranges {
+	position:relative; top:78px; left:0px;
+	width: 237px;
+	height: 10px;
+	float:left;
+}
+
+.range1 {
+    top:95px;
+}
+
+.init {
+	position:relative; top:0px; left:-23px;
+	width: 50px;
+	height: 10px;
+	float:left;
+	color:#c41230;
+	font-size:14px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+.end {
+	position:relative; top:0px; left:146px;
+	width: 50px;
+	height: 10px;
+	float:left;
+	color:#c41230;
+	font-size:14px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+.cashback{
+    width:80px;
+    height:20px;
+    position:relative; top:42px; left:240px;
+    color:#6b5e51;
+    font-size:10px;
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    text-align:center;
+    line-height:10px;
+}
+
+.cashback1{
+    top:60px;
+}
+
+.cashbackCopy{
+    width:40px;
+    text-align:center;
+}
+
+
+.value {
+    color:#c41230;
+    font-size:18px;
+    text-align:center;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    margin-bottom:8px;
+    width:80px;
+}
+
+/*Styles fot Charts*/
+    
+#charts {
+	position:relative; top:42px; left:0px;
+	width:260px;
+	height:200px;
+	float:right;
+}
+
+.graphicTitle {
+	color: #6b5e51;
+	position:relative; top:0px; left:18px;
+	font-family:'ConnectionsBold', Arial, sans-serif;
+	font-size:16px;
+	width:230px;
+}
+
+.line {
+	width: 210px;
+	height: 4px;
+	position:relative; top:0px; left:0px;
+	background-color:#a39382;
+}
+
+#graphics {
+	position:relative; top:-10px; left:0px;
+	width: 200px;
+	height: 148px;
+}
+
+.shapes{
+	position:relative; top:4px; left:0px;
+}
+
+.levels{
+    position:relative; top:30px; left:0px;
+    width:280px;
+}
+
+.ruler{
+	position:relative; top:0px; left:0px;
+	height:26px;
+}
+
+.lineSmall{
+	position:relative; top:0px; left:0px;
+	width: 207px;
+	height: 1px;
+	background-color:#cfc6b7;
+}
+
+.level{
+	position:relative; top:-7px; left:-23px;
+	font-size:11px;
+    font-family:Arial, sans-serif;
+	color:#524940;
+	width:42px;
+	float:right;
+}
+
+.shapes .line {
+    top:2px;
+}
+
+
+/*Graphic 1*/
+
+#chart1 {
+	width: 72px;
+	height: 1px;
+	position:absolute; top:0px; left:22px;
+	background-color:#c41230;
+	opacity: 0.9;
+	/*blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply; */
+}
+
+#chartLoyaltyMonth{
+    width: 72px;
+    height: 1px;
+    background-color:#a39382; 
+    position:absolute; top:0px;
+    opacity: 0.9;
+    /*blend-mode: multiply;
+    -webkit-blend-mode: multiply;
+    mix-blend-mode: multiply; */
+}
+
+/*Graphic 2*/
+
+#chart2 {
+	width: 72px;
+	height: 1px;
+	position:absolute; top:0px; left:118px;
+	background-color:#012169;
+	opacity: 0.92;
+	/*blend-mode: multiply;
+	-webkit-blend-mode: multiply;
+	mix-blend-mode: multiply; */
+}
+
+#chartLoyaltyYear{
+    width: 72px;
+    height: 1px;
+    background-color:#a39382; 
+    position:absolute; top:0px;
+    opacity: 0.9;
+   /* blend-mode: multiply;
+    -webkit-blend-mode: multiply;
+    mix-blend-mode: multiply; */
+}
+
+/*Styles for content in speech bubbles*/
+
+
+#totalmonth {
+    color: #FFFFFF;
+    font-size:16px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    text-align:center;
+    margin-top:4px;
+}
+
+#totalmonth.noBonus {
+    font-size: 10px;
+}
+
+#totalyear {
+    color: #FFFFFF;
+    font-size:16px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    text-align:center;
+    margin-top:4px;
+}
+
+#totalyear.noBonus {
+    font-size: 10px;
+}
+
+#totalyear-horizontal {
+    color: #FFFFFF;
+    font-size:10px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    text-align:center;
+    margin-top:4px;
+}
+
+.triangle-border .superscript {
+    font-size:10px;
+    color: #FFFFFF;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+}
+
+/*Speech bubble*/
+
+.triangle-border {
+	width: 92px;
+	height: 17px;
+	position:relative; top:-52px; left:-19px;
+	padding:1px;
+	margin:1em 0 3em;
+	border:2px solid #0b548f;
+	color:#FFFFFF;
+	background-color:#0b548f;
+	opacity: 0.95;
+	font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    line-height: 15px;
+    float:left;
+}
+
+#chart1 .triangle-border {
+    left:-22px;
+}
+
+.triangle-border:before {
+	content:"";
+	position:absolute;
+	bottom:-18px; /* value = - border-top-width - border-bottom-width */
+	left:50px; /* controls horizontal position */
+    border-width:18px 10px 0;
+	border-style:solid;
+    border-color:#0b548f transparent;
+	opacity: 0.95;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+	content:"";
+	position:absolute;
+	bottom:-7px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:7px 7px 0;
+	border-style:solid #0b548f;
+	border-color:#0b548f transparent;
+	opacity: 0.95;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+
+.triangle-border-horizontal {
+    width: 107px;
+    height: 50px;
+    position:relative; top:-113px; left:-118px;
+    padding:1px;
+    margin:1em 0 3em;
+    border:2px solid #0b548f;
+    color:#FFFFFF;
+    background-color:#0b548f;
+    opacity: 0.95;
+    font-size:12px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    line-height: 15px;
+    float:left;
+}
+
+.triangle-border-horizontal:before {
+    position:absolute;
+    bottom:16px;
+    left:110px;
+    content:"";
+    display:block; 
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #0b548f;
+}
+
+
+/*Styles for base and footer elements*/
+
+.basechart {
+    width: 85px;
+    height: 25px;
+    position:relative; top:8px; left:16px;
+    color: #524940;
+    font-size:10px;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    float:left;
+    margin-right:12px;
+}
+
+/*Styles for the color indicators*/
+
+.colors{
+    position:relative;
+    top:20px;
+    width: 240px;
+    float:left;
+}
+
+.colorIndicator{
+    width: 120px;
+    height:16px;
+    float:left;
+    margin-bottom:8px;
+}
+
+.colorDisplayer{
+    background-color:#c41230;
+    width:16px;
+    height:16px;  
+    float:left;
+}
+
+.lightgrey{
+    background-color:#a39382;
+}
+
+.darkgrey{
+    background-color:#857363;
+}
+
+.darkblue{
+    background-color: #012169;
+}
+
+.colorDescription{
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    color: #524940;
+    font-size:10px;
+    margin-left:24px;
+}
+
+.footerBorder {
+    background-color:#d1c9c0;
+    width:630px;
+    height:45px;
+    color:#444444;
+    font-size:13px;
+    font-family:'ConnectionsBold', Arial, sans-serif;
+    text-align:left;
+    position: absolute;
+    top:680px;
+}
+
+.ie7 .footerBorder {
+   left:0px;
+}
+
+.footerBorder p{
+    position:relative;
+    line-height: 16px;
+    text-align: left;
+    margin-top: 6px;
+    margin-left:18px;
+}
+
+/**
+* Responsive Design
+*
+* The iPhone 4 display is 320 by 480 points in size total. 
+* The status bar is 20 points high, 
+* and the tool bar at the bottom in 44 points high.
+*
+**/
+
+@media screen and (max-width: 450px) {
+/*
+
+#charts {
+	width: 330px;
+	position:relative; top:420px; left:120px;
+}
+
+* */
+
+}

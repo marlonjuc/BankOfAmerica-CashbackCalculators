@@ -1,0 +1,610 @@
+/*
+ * HTML5 Boilerplate
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    background: #f1f1f0;
+    color: #6b5e51;
+    font-size: 1em;
+    font-family: "connectionsregular", arial;
+    line-height: 1.4;
+}
+
+/*font face*/
+@font-face {
+    font-family: 'connectionsregular';
+    src: url('../fonts/connections_regular-web.eot');
+    src: url('../fonts/connections_regular-web.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/connections_regular-web.woff') format('woff'),
+         url('../fonts/connections_regular-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'connectionsbold';
+    src: url('../fonts/connections_bold-web.eot');
+    src: url('../fonts/connections_bold-web.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/connections_bold-web.woff') format('woff'),
+         url('../fonts/connections_bold-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.pie{
+    behavior:url(PIE.htc);
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+#wrapper{
+    background: #fff;
+    border: 1px solid #d4d4d3;
+    margin: 40px auto 150px;
+    width: 976px;
+    padding: 22px 28px 34px 0;
+    overflow: hidden;
+}
+
+.ie7 body{
+    padding-bottom:150px;
+}
+
+#bofa{
+    display: block;
+    margin-bottom: 40px;
+    padding-left: 24px;
+    width: 172px;
+}
+
+/*section styles*/
+
+#section{
+    width: 669px;
+    float: left;
+    padding-left: 24px;
+}
+
+#section.sectionCash{
+    margin-bottom:16px;
+}
+
+#calculator{
+    margin: 0 0 35px -24px;
+}
+
+.ie7 #calculator{
+    margin-bottom: 0px;
+}
+
+small{
+    font-size: 13px;
+}
+
+/*Headline styles*/
+h1{
+    color: #dc1431;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 10px;
+    word-spacing: -2px;
+    letter-spacing: -1px;
+    line-height: 30px;
+}
+
+h1 .travelHeader{
+    font-size: 29px;
+}
+
+h1 sup{
+    font-size: 14px;
+    top: -0.9em;
+}
+
+.ie7 h1 sup{
+    font-size: 16px;
+}
+
+.ie8 h1 sup{
+    font-size: 16px;
+}
+
+h2{
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 30px;
+    width: 500px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.travel h2{
+    width: 455px;
+}
+/*aside styles*/
+
+aside{
+    float: right;
+    width: 269px;
+    padding-top: 22px;
+}
+
+.aside_travel b{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+
+.aside_travel{
+    width: 280px;
+}
+
+aside.flash {
+	margin-top: -110px;
+	padding-top: 0px;
+}
+
+aside p{
+    font-size: 16px;
+    margin: 0 5px 20px;
+    line-height: 19px;
+    width: 250px;
+}
+
+.aside_travel p{
+    margin: 0 -5px 20px;
+}
+
+aside .note{
+    margin-left: 52px;
+    display: block;
+}
+
+.ie7 aside .note{
+    margin-left: 50px;
+}
+
+
+aside .loyaltyp{
+    width: 228px;
+    left:0px;
+    margin-top:45px;
+}
+
+.ie7 .loyaltyp{
+    margin-left:5px;
+}
+
+.ie8 aside .loyaltyp{
+    margin-top:25px;
+ }
+ 
+ .ie7 aside .loyaltyp{
+    margin-top:25px;
+ }
+
+.aside_travel p{
+    width: 280px;
+}
+
+aside a, aside a:visited{
+    color: #0073cf;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: 'connectionsbold';
+}
+
+aside strong{
+    font-family: 'connectionsbold';
+}
+
+.card{
+    margin-bottom: 32px;
+}
+
+#benefits{
+    margin-top: 48px;
+} 
+
+.ie7 #benefits{
+    margin-top: 25px;
+ }
+ 
+
+
+.icon_description{
+    width:270px;
+}
+
+.big_blue_description p{
+    width:250px;
+}
+
+ #benefits p{
+    font-size: 13px;
+    line-height: 15px;
+ }
+
+ #benefits a{
+    font-size: 12px;
+ }
+
+.blue_txt{
+    display: block;
+    color: #0073cf;
+    font-family: 'connectionsbold';
+    font-size: 29px;
+    float: left;
+    margin: 5px 10px;
+    height:25px;
+}
+
+.ie7 .blue_txt{
+   line-height: 40px;
+   margin-top: -6px;
+   height:35px;
+}
+
+.blue_loyalty{
+    width:48px;
+    height:100px;
+    margin-left:-6px;
+}
+
+.ie7 .blue_loyalty{
+    width:40px;
+    height:120px;
+    margin-right:18px;
+}
+
+.blue_txt .small{
+    font-family:'Cconnectionsbold', Arial, sans-serif;
+    font-size: 18px;
+    margin: 0px 0px;
+}
+
+.ie7 .blue_txt .small{
+    margin-top: -15px;
+}
+
+.blue_txt .superscript {
+    top: -0.5em;
+    /*vertical-align:super;*/
+    font-family:'ConnectionsRegular', Arial, sans-serif;
+    font-size: 18px;
+    color: #0073cf;
+    position: relative;
+}
+
+.big_blue {
+    font-size: 38px;
+    font-family: 'ConnectionsBold';
+    color: #0073cf;
+    float:left;
+    line-height: 15px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-left:5px;
+}
+
+.ie7 .big_blue {
+    line-height: 28px;
+    margin-top: 2px;
+}
+
+.travel #section {
+    width: auto;
+}
+
+.tall{
+    height: 80px;
+    margin-right: 10px;
+    margin-left:0px;
+    font-size: 34px;
+    margin-bottom:10px;
+}
+
+#benefits{
+    margin-top: 48px;
+}
+
+#benefits .travel_icon {
+    margin-left: 22px;
+    margin-right: 4px;
+}
+
+
+/*icons styles*/
+.cash_icon{
+    background: url(../img/cash_icons_high_spend_new.jpg) no-repeat top left;
+    display: block;
+    width: 46px;
+    height: 38px;
+    float: left;
+    margin-right:6px;
+}
+
+.travel_icon{
+    background: url(../img/travel_icons.png) no-repeat top left;
+    display: block;
+    width: 44px;
+    height: 32px;
+    margin: 3px 0 15px 27px;
+    float: left;
+}
+
+/*Cash Rewards icons*/
+.ic1{
+   background-position: 6px 0px;
+   margin-top:2px;
+}
+.ic2{
+    background-position: 5px -38px;
+    height:40px;
+    margin-top:-1px;
+}
+.ic3{
+    background-position: 6px -92px;
+    margin-top:0px;
+}
+
+.travel_icon.ic1{
+    background-position: 0px 0px;
+}
+.travel_icon.ic2{
+    background-position: 0px -70px;
+}
+.travel_icon.ic3{
+    background-position: 0px -126px;
+}
+
+
+
+
+/*footer styles*/
+footer{
+    clear: both;
+    color: #333333;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    padding-left: 24px;
+}
+
+footer .copyright{
+    color: #4d4f53;
+}
+
+footer p:first-child{
+    margin-top: 0px;
+}
+
+footer a, footer a:visited{
+    color: #0052c2;
+    text-decoration: none;
+}
+
+.house{
+    margin:0 0 4px 2px;
+}
+
+.note{
+    font-size: 11px;
+    font-family:Arial, sans-serif;
+}
+
+.footnote{
+    text-decoration:none;
+    color:#333333;
+    font-family:Arial, sans-serif;
+}
+
+#subheader .footnote{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+.description .footnote{
+    text-decoration:none;
+    color:#333333;
+    font-family:Arial, sans-serif;
+}
+
+aside p .footnote{
+    color:#6B5E51;
+}
+
+.loyaltyp .footnote{
+    color:#6B5E51;
+}
+
+acronym{
+    border: 0 none;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+a:focus, img:focus, p:focus{
+    border: dotted 1px solid red;
+}
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+

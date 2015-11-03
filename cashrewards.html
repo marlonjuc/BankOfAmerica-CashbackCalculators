@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bank of America | Cash Rewards</title>
+        <meta name="description" content="">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/cashcalculator.css">
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <!--<script src="https://raw.github.com/douglascrockford/JSON-js/master/json2.js"></script>--><!-- work with JSON on IE7 -->
+        <script type="text/javascript" src="js/greensock/TweenLite.min.js"></script>
+        <script type="text/javascript" src="js/greensock/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="js/greensock/plugins/CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.ezmark.min.js"></script><!-- checkboxes plugin -->
+        <script type="text/javascript" src="js/plugins/jquery.jqplugin.1.0.2.min.js"></script><!-- get the browser flash shockwave --> 
+        <script type="text/javascript" src="js/flash/swfobject.js"></script>
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/plugins/detectmobilebrowser.js"></script><!--Detect Mobile Devices-->
+        
+        <script type="text/javascript">
+           /*Config Variables*/
+           var maxSlider1 = 50000;
+           var maxSlider2 = 10000;
+           var maxSlider3 = 15000;
+           var percent1 = 1;
+           var percent2 = 2;
+           var percent3 = 3;
+           var containerStageHeight = 0;
+    
+           var params = {};
+           params.quality = "high";
+           params.bgcolor = "#ffffff";
+           params.play = "true";
+           params.loop = "true";
+           params.wmode = "opaque";
+           params.scale = "scale";
+           params.menu = "true";
+           params.devicefont = "false";
+           params.salign = "";
+           params.allowScriptAccess = "always";
+		   //Tab for Internet Explorer
+		   params.seamlessTabbing = "false";
+           var attributes = {};
+           attributes.id = "flashContent";
+           attributes.align = "left";
+           //Flashvars
+           var flashvars = {};
+           flashvars.maxSlider1 = maxSlider1;
+           flashvars.maxSlider2 = maxSlider2;
+           flashvars.maxSlider3 = maxSlider3;
+           flashvars.percent1 = percent1;
+           flashvars.percent2 = percent2;
+           flashvars.percent3 = percent3;
+
+           function callFlashStageJS()
+           {
+               var flash = thisMovie("flashContent");
+				containerStageHeight = flash.getFlashStageHeight();
+				console.log("getFlashStageHeight " + containerStageHeight);
+				$("#flashContent").height(containerStageHeight);
+           }
+           
+           function thisMovie(movieName) {
+                 if (navigator.appName.indexOf("Microsoft") != -1) {
+                     return window[movieName];
+                 } else {
+                     return document.getElementById(movieName);
+                 }
+            }
+            
+            function gotoFirstFooterLink() {
+                $("#firstFooterLink").focus();
+            }
+			
+			function pageScroll() {
+				window.scrollBy(0,40); // horizontal and vertical scroll increments
+			}
+		   
+        </script>
+    </head>
+    <body>
+        <div id="wrapper" >
+            <a href="https://www.bankofamerica.com/" tabindex="1" id="bofa" target="_blank" title="Bank of America">
+                <img src="img/bofa_logo_Header.gif" alt="Bank of America top" /><span class="hidden">Link opens a new window</span>
+            </a>
+
+            <div id="section" class="sectionCash">
+                <small>Small Business Credit Cards</small>
+                <h1>Cash Rewards for Business MasterCard<sup>&reg;</sup> credit card</h1>
+                <h2>Get the card that can give you more cash back for the things you buy most, now with an exclusive 25% Loyalty Bonus.</h2>
+                <article>
+                  <!--Description for Screen Reader -->
+                  <span class="hidden">
+                    Cash Back Calculator: How much cash back could you be earning?
+                    Use the sliders to find out.
+                  </span>
+                <!--Dynamic insertion of flash calculator -->
+                   <div id="flashContent"></div>
+                    <div id="html5Content">
+                    <div class="wrapperCalculator">
+                        <div class="header">
+                            <h3>How much cash back could you be earning?</h3>
+                            <h4>Use the sliders to find out.</h4>
+                        </div>
+                        <div class="icons">
+                           <div id="icon1"><img src="img/icons/icon1.png" alt=""/></div>
+                           <div id="icon2"><img src="img/icons/icon2.png" alt=""/></div>
+                           <div id="icon3"><img src="img/icons/icon3.png" alt=""/></div>
+                        </div>
+                        <div class="loyalty">
+                            <div class="lotaltyTitle">25% Loyalty Bonus:</div>
+                            <div class="loyaltyHeader">Turn your 1% cash back into 1.25% every month (when you spend at least $2,000 every month).<br><span class="loyaltyStatus">You are <span class="loyaltyTotal">$2,000</span> away from getting your bonus.</span></div>
+                        </div>
+                    <div class="content">
+                        <div id="section1"> 
+                            <div class="title">Earn 1% cash back</div>
+                            <div class="description">How much do you spend on average per month on everyday purchases?<br>
+                            <span class="note">(Excludes purchases from the 2% and 3% categories below.)</span></div>
+                            <div id="slider1"><span class="tooltip"></span><span class="hidden"> Indicator</span></div> <!-- the Slider -->
+                            <div class="ranges range1"><div class="init">$0<span class="hidden"> Initial Range Purchases</span></div><div class="end">$50,000<span class="hidden"> Final Range Purchases</span></div></div>
+                            <div class="cashback cashback1"><div id="value1" class="value">$0.00</div><span class="cashbackCopy">cash back<br/>per month</span></div><span class="hidden"> on everyday purchases</span>
+                        </div>
+                        <div id="section2"> 
+                            <div class="title">Earn 2% cash back</div>
+                            <div class="description">How much do you spend on average per<br/>month at restaurants?</div>
+                            <div id="slider2"><span class="tooltip"></span><span class="hidden"> Indicator</span></div> <!-- the Slider -->
+                            <div class="ranges"><div class="init">$0<span class="hidden"> Initial Range Restaurants</span></div><div class="end">$10,000<span class="hidden"> Final Range Restaurants</span></div></div>
+                            <div class="cashback"><div id="value2" class="value">$0.00</div>cash back<br/>per month</div><span class="hidden"> at restaurants</span>
+                        </div>
+                        <div id="section3"> 
+                            <div class="title">Earn 3% cash back</div>
+                            <div class="description">How much do you spend on average per month<br/>at gas stations and office supply stores?<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a></div>
+                            <div id="slider3"><span class="tooltip"></span><span class="hidden"> Indicator</span></div> <!-- the Slider -->
+                            <div class="ranges"><div class="init">$0<span class="hidden"> Initial Range Gas Stations and office supply stores</span></div><div class="end">$15,000<span class="hidden"> Final Range Gas Stations and office supply stores</span></div></div>
+                            <div class="cashback"><div id="value3" class="value">$0.00</div>cash back<br/>per month</div><span class="hidden"> Total cash back at restaurants</span>
+                        </div>
+                    </div>
+                        <div id="charts">
+                        <div id="graphics">
+                            <div class="graphicTitle">PROJECTED CASH BACK<span class="hidden"> Chart</span></div> 
+                            <div class="line"></div>
+                             <div class="levels">
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$15,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$14,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$13,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$12,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$11,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$10,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$9,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$8,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$7,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$6,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$5,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$4,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$3,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$2,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="lineSmall"></div><div class="level">$1,000<span class="hidden"> Scale</span></div></div>
+                                <div class="ruler"><div class="level">$0<span class="hidden"> Scale</span></div></div>
+                             </div>   
+                             <div class="shapes">
+                                <div id="chart1">
+                                     <div id="chartLoyaltyMonth">
+                                        <div class="triangle-border">
+                                            <div id="totalmonth">$0<span class="hidden"> on Chart</span></div> 
+                                        </div>   
+                                     </div>
+                                </div>
+                                <div id="chart2">
+                                     <div id="chartLoyaltyYear">
+                                        <div class="triangle-border">
+                                            <div id="totalyear">$0<span class="hidden"> on Chart</span></div>
+                                        </div>  
+                                        <div class="triangle-border-horizontal">
+                                            <div id="totalyear-horizontal">$0<span class="hidden"> on Chart</span></div>
+                                        </div>    
+                                     </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="basechart">Total cash back/month</div>
+                                <div class="basechart">Total cash back/year</div>
+                                <div class="colors">
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer"></div><div class="colorDescription">Cash back/month</div>
+                                   </div>
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer lightgrey"></div><div class="colorDescription">Loyalty bonus</div>
+                                   </div>
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer darkblue"></div><div class="colorDescription">Cash back/year</div>
+                                   </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class='footerBorder'>
+                                <p>NOTE: This calculator is for illustrative purposes only. Actual rewards earned will depend upon your individual purchases.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <span class="ADA">
+                <img src="img/cash_reward_card.jpg" class="card" alt="Cash Rewards Credit Card"/>
+                <p><span class="blue_txt">1<span class="superscript">%</span></span> cash back on all purchases<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a></p>
+                <p><span class="blue_txt">2<span class="superscript">%</span></span> cash back at restaurants<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a></p>
+                <p><span class="blue_txt">3<span class="superscript">%</span></span> cash back at gas stations and office supply stores<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a> <span class="note">($250k annual limit on 3% purchases, 1% after that)</span></p>
+                <p class="loyaltyp"><span class="blue_txt blue_loyalty">25<span class="superscript">%</span> <span class="blue_txt small">more</span></span> <strong>25% Loyalty Bonus–</strong><br>Turn your 1% cash back into 1.25% every month you spend at least $2,000 on your credit card.<a href='#footnote2' class='footnote'>**<span class='hidden'>footnote second disclaimer</span></a></span></p>
+                
+                <div id="benefits">
+                    <p><span class="cash_icon ic1"></span> <span class="icon_description">There's no limit to the cash back you can earn</span></p>
+                    <p><span class="cash_icon ic2"></span> <span class="icon_description">No need to register your card or sign up to earn your cash rewards and you never pay an annual fee</span></p>
+                    <p><span class="cash_icon ic3"></span> <span class="icon_description">Get 24/7 access to a U.S.-based, experienced small business customer service specialist</span></p>
+                </div>
+                </span>
+            </aside>
+
+            <footer>
+                <p><a name="footnote1" class="footnote">*</a>Earn Cash Rewards of 1% of new net retail purchase transactions (qualifying purchases less credits, returns, and adjustments) charged to the card each billing cycle. For each qualifying retail purchase, you will receive 2% cash back of the Net Purchase at participating Restaurants. The 2% cash back consists of your base rate of 1% of Net Purchases plus a bonus of 1%. For each qualifying retail purchase, you will receive 3% cash back of the Net Purchase at participating Gas Stations and Office Supply Stores. The 3% cash back consists of your base rate of 1% of Net Purchases plus a bonus of 2%. A purchase qualifies for the bonus if the merchant assigns it to the appropriate merchant category code. There is an annual cap of $250,000 on rewards earned at the rate of 3% at gas stations and office supply stores; any such purchases over $250,000 will earn the base rate of 1%. Earn unlimited Cash Rewards. There is no annual cap on rewards redemption.</p>
+
+                <p><a name="footnote2" class="footnote">**</a>Loyalty Bonus. Earn an additional cash back bonus of 0.25% when your monthly net retail purchases equal or exceed $2,000. We calculate the monthly cash back payout on the last day of the calendar month (based on net retail purchases posted to the account during that month), and we award the cash back bonus on the first day of the following month. Please note that this monthly time frame will not coincide with your card Billing Cycle. We calculate total net purchases monthly from the first day of every month to the last day of every month. If your total net purchases for a given month equal or exceed $2,000, you earn the cash back bonus, calculated by multiplying your total net purchase amount by 0.0025. The total net purchase balance for the purpose of calculating the cash back bonus will revert to $0 on the first day of each month.</p>
+
+                <p>Credit is subject to approval. Credit cards issued by FIA Card Services, N.A.</p>
+
+                <p>Bank of America and the Bank of America logo are registered trademarks of Bank of America Corporation. MasterCard is a registered trademark of MasterCard International Incorporated, and is used by the issuer pursuant to license.</p>
+
+                <a id="firstFooterLink" href="https://www.bankofamerica.com/" tabindex="10" target="_blank" title="Bank of America">
+                    <img src="img/bofa_logo.gif" alt="Bank of America bottom" /><span class="hidden">Link opens a new window</span>
+                </a>
+
+                <p class="copyright"><a target="_blank" name="Privacy" title="Privacy &amp; Security" tabindex="11" href="http://www.bankofamerica.com/privacy/">Privacy &amp; Security</a><span class="hidden">Link opens a new window</span><br>
+                Bank of America, N.A. Member <acronym title="Federal Deposit Insurance Corporation">FDIC. </acronym><a name="Housing" title="Equal Housing Lender" tabindex="12" class="houseLender" target="_blank" href="http://www.bankofamerica.com/help/equalhousing_popup.cfm">Equal Housing Lender<span class="hidden">Link opens a new window</span> <img alt="Equal Housing Lender" class="house" src="img/equal_house.gif" /></a><br/>
+                &copy; Copyright 2014 Bank of America Corporation. All rights reserved. AR5CS9TT </p>
+            </footer>
+            
+        </div>
+    
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="js/jquery/jquery.ui.touch-punch.js"></script><!-- touchscreen plugin -->
+        <script src="js/cashcalculator.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            // Handler for .ready() called.
+           if ($.browser.flash == true)//&& (!jQuery.browser.mobile)
+            {
+                //Device supports FLASH;
+                //alert("Flash")
+                 showHTML5Calculator();
+                
+            }else{
+                //Device does NOT supports FLASH, showing HTML5;
+                showHTML5Calculator();
+            } 
+            
+            //$('#widget').draggable();// for mobile use, touch screen events
+            });
+        </script>
+       <!--<script src="js/jquery-1.9.0.min.js"></script>
+       <script src="js/core.js"></script>
+        <script src="js/main.js"></script>-->
+
+<!-- Coremetrics libraries -->
+    
+    </body>
+</html>

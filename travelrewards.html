@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bank of America | Travel Rewards</title>
+        <meta name="description" content="">
+         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/travelcalculator.css">
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <!--<script src="https://raw.github.com/douglascrockford/JSON-js/master/json2.js"></script> --><!--work with JSON on IE7 -->
+        <script type="text/javascript" src="js/greensock/TweenLite.min.js"></script>
+        <script type="text/javascript" src="js/greensock/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="js/greensock/plugins/CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.ezmark.min.js"></script><!-- checkboxes plugin -->
+        <script type="text/javascript" src="js/plugins/jquery.jqplugin.1.0.2.min.js"></script><!-- get the browser flash shockwave --> 
+        <script type="text/javascript" src="js/flash/swfobject.js"></script>
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/plugins/detectmobilebrowser.js"></script><!--Detect Mobile Devices-->
+        
+        <script type="text/javascript">
+           /*Config Variables*/
+           var maxSlider1 = 50000;
+           var maxSlider2 = 2500;
+           var percent1 = 1.5;
+           var percent2 = 3;
+           var topProjected = 4500;
+           var containerStageHeight = 0;
+           
+           /*Config Variables*/
+            var checkBoxes = {
+                "Title": "Earn even more rewards if you qualify for one or both of the following:",
+                "Boxes": [ 
+                {
+               "Description": "Earn an extra <span class='bold'>5,000 bonus points</span><br/>with first qualifying credit card purchases<a href='#footnote3' class='footnote'>***<span class='hidden'>footnote third disclaimer</span></a>",
+               "Value": "5000"
+                },
+                {
+               "Description": "You may earn an additional <span class='bold'>10,000 bonus card points</span><br/>by spending $500 on your new credit card if you are<br />a Business Advantage or Business Fundamentals<sup>®</sup><br />checking solution customer<a href='#footnote4' class='footnote'>****<span class='hidden'>footnote fourth disclaimer</span></a>",
+               "Value": "10000"
+                }
+              ]
+            };
+    
+           var params = {};
+           params.quality = "high";
+           params.bgcolor = "#ffffff";
+           params.play = "true";
+           params.loop = "true";
+           params.wmode = "opaque";
+           params.scale = "scale";
+           params.menu = "true";
+           params.devicefont = "false";
+           params.salign = "";
+           params.allowScriptAccess = "always";
+		   //Tab for Internet Explorer
+		   params.seamlessTabbing = "false";
+           var attributes = {};
+           attributes.id = "flashContent";
+           attributes.align = "left";
+           //Flashvars
+           var flashvars = {};
+           flashvars.maxSlider1 = maxSlider1;
+           flashvars.maxSlider2 = maxSlider2;
+           flashvars.percent1 = percent1;
+           flashvars.percent2 = percent2;
+           flashvars.topProjected = topProjected;
+           
+           function callFlashStageJS()
+           {
+			   
+				var flash = thisMovie("flashContent");
+				containerStageHeight = flash.getFlashStageHeight();
+				console.log("getFlashStageHeight " + containerStageHeight);
+				$("#flashContent").height(containerStageHeight);
+           }
+		   
+		   function thisMovie(movieName) {
+				 if (navigator.appName.indexOf("Microsoft") != -1) {
+					 return window[movieName];
+				 } else {
+					 return document.getElementById(movieName);
+				 }
+			}
+			
+			function gotoFirstFooterLink() {
+                $("#firstFooterLink").focus();
+            }
+			
+			function pageScroll() {
+				window.scrollBy(0,400); // horizontal and vertical scroll increments
+			}
+ 
+        </script>
+    </head>
+    <body class="travel">
+        <div id="wrapper">
+            <a href="https://www.bankofamerica.com/" tabindex="1" id="bofa" target="_blank" title="Bank of America">
+                <img src="img/bofa_logo_Header.gif" alt="Bank of America top" />
+                <span class="hidden">Link opens a new window</span>
+            </a>
+
+            <div id="section">
+                <small>Small Business Credit Cards</small>
+                <h1><span class="travelHeader">Travel Rewards Visa Signature<sup>&reg;</sup>
+Business credit card</span></h1>
+                <h2>Get the card that lets you use your points for more than just flights, now with an exclusive 25% Loyalty Bonus.</h2>
+
+                <!--Description for Screen Reader -->
+                  <span class="hidden">
+                    Rewards Calculator: How many rewards could you be earning?
+                    Use the sliders to find out.
+                  </span>
+
+                <!--Dynamic insertion of flash calculator -->
+                <article id="calculator">
+                    <div id="flashContent" ></div>
+                    <div id="html5Content">
+                    <div class="wrapperCalculator">
+                        <div class="header">
+                            <h3>How many rewards could you be earning?</h3>
+                            <h4>Use the sliders to calculate your reward points.</h4>
+                        </div>
+                    <div class="content">
+                        <div id="section1">	
+                            <div class="title">What's your average monthly spending?</div>
+                            <div id="slider1"></div> <!-- the Slider -->
+                            <div class="ranges"><div class="init">$0<span class="hidden"> Initial Range monthly spending</span></div><div class="end">$50,000<span class="hidden"> Final Range monthly spending</span></div></div>
+                            <div class="description">You'll get 1.5 points per $1 spent on everything you buy.<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a><br>
+Earn 25% more after $2,000.<a href="#footnote2" class="footnote">**<span class='hidden'>footnote second disclaimer</span></a></div> 
+                        </div>
+                        
+                       <div class="screens">
+                            <div class="screen screenLeft"><span class="value">Points Earned</span></div> 
+                            <div id="valueMonth" class="screen screenRed"><span class="value">0 points/month</span></div> 
+                            <div id="valueYear" class="screen"><span class="value">0 points/year</span></div>
+                       </div>
+                       <div class="screens">
+                            <div class="screen screenLeft"><span class="value">Bonus Points</span></div> 
+                            <div id="bonusMonth" class="screen screenRed"><span class="value">0 points/month</span></div> 
+                            <div id="bonusYear" class="screen"><span class="value">0 points/year</span></div>
+                       </div>
+                       <div class="screens">
+                            <div class="screen screenLeft"><span class="value">Total Points</span></div> 
+                            <div id="totalMonth" class="screen screenRed"><span class="value">0 points/month</span></div> 
+                            <div id="totalYear" class="screen"><span class="value">0 points/year</span></div>
+                       </div>
+                        <div class="header" id="subheader">
+                            <h3>Here are two different ways to redeem your points:</h3>
+                        </div>
+                    </div>
+                        <div id="charts">
+                            <div id="points">
+                                <div class="bar">
+                                     <div class="icon"><img src="img/icons/travel_new_icon2.png" alt=""/></div>
+                                     <div class="graphicTitle">DOMESTIC ROUND TRIP<span class="hidden"> Chart</span></div> 
+                                     <div class="graphicSubtitle">airline tickets <span class="hidden"> Graphic</span></div> 
+                                     <div class="line"></div>
+                                </div>
+                             <div class="levels">
+                                <div class="ruler"><div class="level">50<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">45<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">40<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">35<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">30<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">25<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">20<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">15<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">10<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">5<span class="hidden"> Points Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler lastItem"><div class="level">0<span class="hidden"> Points Scale</span></div></div>
+                             </div>
+                             <div class="shapes">
+                                <div id="chart4">
+                                    <div class="triangle-border">
+                                        <div id="totalpoints">0<span class="hidden"> Points</span></div>
+                                        <span class="hidden"> on Chart</span>
+                                    </div>
+                                </div>
+                                <div id="chart3">
+                                </div>
+                                <div class="line"></div>
+                                </div>
+                                <div class="pointsLabel"><p align="center"><span style="margin-left: -30px">Total domestic round trips/year</span></p>
+                                <p align="right"><span style="font-size:14px;width: 100px;">1 roundtrip = 25,000 points</span><br>
+(minimum required for a ticket)</p></div>
+<div class="colors">
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer"></div><div class="colorDescription">Domestic round trips/year</div>
+                                   </div>
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer lightgrey"></div><div class="colorDescription">Bonus round trips/year</div>
+                                   </div>
+                                </div>
+                            </div>
+                             <div class="or">OR<span class="hidden"> Charts Separator</span></div>
+                             <div id="graphics">
+                                 <div class="bar">
+                                    <div class="icon"><img src="img/icons/travel_icon1.png" alt=""/></div>
+                                    <div class="graphicTitle">CASH REWARDS<span class="hidden"> Chart</span></div> 
+                                    <div class="graphicSubtitle">with no restrictions<span class="hidden"> Graphic</span></div> 
+                                    <div class="line"></div>
+                                </div>
+                            <div class="levels">
+                                <div class="ruler"><div class="level">$8,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$7,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$6,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$5,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$4,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$3,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$2,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler"><div class="level">$1,000<span class="hidden"> Scale</span></div><div class="lineSmall"></div></div>
+                                <div class="ruler lastItem"><div class="level">$0<span class="hidden"> Scale</span></div></div>
+                             </div>
+                            <div class="shapes">
+                            	<div id="chart1_1">
+                                <div class="triangle-border">
+                                        <div id="monthcash">$0</div>
+                                        <span class="hidden"> on Chart</span>
+                                     </div>
+                                </div>
+                                <div id="chart1">
+                                </div>
+                                <div id="chart2_1">
+                                <div class="triangle-border">
+                                        <div id="totalcash">$0</div>
+                                        <span class="hidden"> on Chart</span>
+                                    </div>
+                                </div>
+                                <div id="chart2">
+                                </div>
+                                <div class="line"></div>
+                                </div>
+                             </div>
+                             
+                        </div> 
+                        <div id="base">
+                          <div class="pointsLabel" align="center">Total cash<br/>
+                            back/year</div>
+						  <div class="pointsLabel" align="center">Total cash<br/>
+          					back/month</div>
+                            
+                        <div class="pointsLabelRight"><p align="right"><span style="font-size:14px">2,500 points = $15 cash back</span><br>
+(minimum required for a cash reward)</p></div>
+
+                        <div class="colors">
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer"></div><div class="colorDescription">Cash back/month</div>
+                                   </div>
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer lightgrey"></div><div class="colorDescription">Loyalty bonus</div>
+                                   </div>
+                                   <div class="colorIndicator">
+                                       <div class="colorDisplayer darkblue"></div><div class="colorDescription">Cash back/year</div>
+                                   </div>
+                                </div>
+                                <div class="footerBorder"></div>
+                        <form id="bonus" class='customCheckBox'>
+                        </form><div class="disabled" id="leftDisabled"></div>
+                        <div class="disabled" id="rightDisabled"></div>
+                    </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="aside_travel">
+                
+                <img src="img/travel_reward_card.jpg" class="card" alt="Travel Rewards Credit Card"/>
+                <div class="big_blue_description"><p><span class="big_blue">1.5</span> Points for every $1 spent on purchases<a href="#footnote1" class="footnote">*<span class='hidden'>footnote first disclaimer</span></a></p></div>
+                <p><span class="big_blue tall">25<sup style="font-size: 20px;">%</sup><br>
+<span style="font-size: 20px;">more</span></span> <b>25% Loyalty Bonus –</b><br>
+Turn 1.5 points into 1.875 every 
+month when you spend at least 
+$2,000 on your card.<a href="#footnote2" class="footnote">**<span class='hidden'>footnote second disclaimer</span></a></p>
+                
+
+                <div id="benefits">
+                  <p><span class="travel_icon ic1"></span> Redeem for things like hotel stays, cruises, and vacation packages or simply use as statement credits or cash back</p>
+                    <p><span class="travel_icon ic2"></span> Your points don't expire or have limits, and can even be combined with other WorldPoints credit cards</p>
+                </div>
+                
+            </aside>
+
+            <footer>
+                <p><a name="footnote1" class="footnote">*</a>The Travel Rewards Visa Signature<sup>&reg;</sup> Business credit card allows you to earn 1.5 Points per dollar of Net Purchases (as defined in the Program Rules). You can earn 3 Points (1.5 base points and 1.5 bonus points) per dollar on Purchases made through the Bank of America Travel Center, excluding insurance purchases which will earn 1.5 points.</p>
+
+                <p><a name="footnote2" class="footnote">**</a>Loyalty Bonus. Earn 1.875 points when your monthly net retail purchases equal or exceed $2,000 (your 1.5 base points plus a 25% bonus of .375 points). We calculate the monthly point bonus on the last day of the calendar month (based on net retail purchases posted to the account during that month), and we award the point bonus on the first day of the following month. Please note that these monthly bonus calculations will not coincide with your card Billing Cycles. We calculate total net purchases monthly from the first day of every month to the last day of every month. If your total net purchases for a given month equal or exceed $2,000, you earn the point bonus, calculated by multiplying your total net purchase amount by 0.375. The total net purchase balance for the purpose of calculating the point bonus will revert to $0 on the first day of each month.  Example: $2,000 in total monthly qualifying purchases = 750 bonus points ($2,000 x 0.375).</p>
+                
+                <p><a name="footnote3" class="footnote">***</a>5,000 First Use Bonus Points:First Use Bonus Points are awarded after the first purchase made within 90 days of account opening. Bonus Points are awarded to the Company Level account. Only one First Use Bonus Points will be awarded per Company.</p>
+
+                <p><a name="footnote4" class="footnote">****</a>If you have an open Business Advantage or Business Fundamentals checking solution, you may receive the 10,000 points when you open a new Travel Rewards Visa Signature<sup>&reg;</sup> Business credit card account, link your new card to the checking solution and make at least $500 in retail purchases with your card that post to your account within 60 days from account opening. Card bonus only given to first-time small business card customers who have an existing Business Fundamentals or Business Advantage checking solution. Having an existing, stand-alone Business Economy Checking or Business Advantage Checking account does not qualify for the bonus (except in <acronym title="Arizona">AZ</acronym>, <acronym title="Georgia">GA</acronym> and <acronym title="Massachusetts">MA</acronym>). Co-branded cards are not eligible. If eligible, only one bonus allowed per company and will be applied to the company account.</p>
+
+                <p>Credit is subject to approval. Credit cards issued by FIA Card Services, N.A.</p>
+
+                <p>Bank of America and the Bank of America logo are registered trademarks of Bank of America Corporation.</p>
+                
+                <p>Visa is a registered trademark of Visa International Service Association, and is used by the issuer pursuant to license from Visa U.S.A. Inc.</p>
+
+                <a id="firstFooterLink" href="https://www.bankofamerica.com/" tabindex="12" target="_blank" title="Bank of America">
+                    <img src="img/bofa_logo.gif" alt="Bank of America bottom" />
+                    <span class="hidden">Link opens a new window</span>
+                </a>
+
+                <p class="copyright"><a target="_blank" name="Privacy" tabindex="13" title="Privacy &amp; Security" href="http://www.bankofamerica.com/privacy/">Privacy &amp; Security<span class="hidden">Link opens a new window</span></a><br>
+                Bank of America, N.A. Member <acronym title="Federal Deposit Insurance Corporation">FDIC</acronym>. <a name="Housing" title="Equal Housing Lender" tabindex="14" class="houseLender" target="_blank" href="http://www.bankofamerica.com/help/equalhousing_popup.cfm">Equal Housing Lender <img alt="Equal Housing Lender" class="house" src="img/equal_house.gif" /></a><br/>
+                &copy; Copyright 2014 Bank of America Corporation. All rights reserved. AR5CS9TT</p>
+            </footer>
+            
+       		</div>			
+		</div>
+    
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="js/jquery/jquery.ui.touch-punch.js"></script><!-- touchscreen plugin -->
+        <script src="js/travelcalculator.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            // Handler for .ready() called.
+            if ($.browser.flash == true && (!Modernizr.canvas))//&& (!jQuery.browser.mobile)
+            {
+                //Device supports FLASH;
+                swfobject.embedSWF("flash/BusinessCard.swf", "flashContent",669, 1138, "9.0", null, flashvars, params, attributes);
+                showFlashCalculator();
+            }else{
+                //Device does NOT supports FLASH, showing HTML5;
+                showHTML5Calculator();
+            } 
+            
+            $('#widget').draggable();// for mobile use, touch screen events
+            });
+        </script>
+        <!--<script src="js/jquery-1.9.0.min.js"></script>
+        <script src="js/core.js"></script>
+        <script src="js/main.js"></script>-->
+
+<!-- Coremetrics libraries -->
+    <script type="text/javascript" src="https://www.bankofamerica.com/pa/global-assets/external/coremetrics/hp/eluminate.js"></script>
+    <script type="text/javascript" src="https://www.bankofamerica.com/pa/global-assets/external/coremetrics/hp/cmdatatagutils.js"></script>
+    </body>
+</html>
